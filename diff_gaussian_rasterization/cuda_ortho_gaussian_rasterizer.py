@@ -63,7 +63,7 @@ class _RasterizeGaussians(torch.autograd.Function):
             raster_settings.y_min,
             raster_settings.scale,
             raster_settings.threshold,
-            raster_settings.kernel_size,
+            # raster_settings.kernel_size,
             raster_settings.image_height,
             raster_settings.image_width,
             sh,
@@ -115,7 +115,7 @@ class _RasterizeGaussians(torch.autograd.Function):
                 raster_settings.y_min,
                 raster_settings.scale,
                 raster_settings.threshold,
-                raster_settings.kernel_size,
+                # raster_settings.kernel_size,
                 grad_out_color,
                 sh,
                 raster_settings.sh_degree,
@@ -159,7 +159,7 @@ class GaussianRasterizationSettings(NamedTuple):
     y_min: float
     scale: float
     threshold: float
-    kernel_size: float
+    # kernel_size: float
     bg: torch.Tensor
     scale_modifier: float
     viewmatrix: torch.Tensor
@@ -252,7 +252,7 @@ class GaussianRasterizer(nn.Module):
                 raster_settings.y_min,
                 raster_settings.scale,
                 raster_settings.threshold,
-                raster_settings.kernel_size,
+                # raster_settings.kernel_size,
                 raster_settings.image_height,
                 raster_settings.image_width,
                 raster_settings.prefiltered,
